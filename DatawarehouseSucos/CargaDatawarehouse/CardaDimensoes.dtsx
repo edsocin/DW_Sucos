@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-TES715D"
   DTS:CreatorName="DESKTOP-TES715D\elthe"
-  DTS:DTSID="{E65631CA-B3A2-4637-A145-A09A26297028}"
+  DTS:DTSID="{E7B99EB3-DFE5-44F4-999F-34F0FC2634CF}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.0900.40"
   DTS:LocaleID="1046"
-  DTS:ObjectName="Package"
+  DTS:ObjectName="CardaDimensoes"
   DTS:PackageType="5"
-  DTS:VersionBuild="13"
-  DTS:VersionGUID="{E5C8A956-E21C-4237-BEF0-C99890D4506B}">
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{969BFE76-D3BC-4E50-9132-B219DAB422EF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -90,6 +90,7 @@
       DTS:refId="Package\Criação da Dimensão Cliente"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarefa Fluxo de Dados"
+      DTS:Disabled="True"
       DTS:DTSID="{AABD0051-620B-4EEA-B2E2-01FE936CE5BC}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -3644,6 +3645,21 @@ SELECT'002' AS CODIGO, 'Fábrica São Paulo' AS DESCRITOR</property>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Criação de Dimensão Produto - Nível Categoria"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarefa Fluxo de Dados"
+      DTS:DTSID="{700A256A-8593-4BA7-AD2F-2404D1516D86}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Criação de Dimensão Produto - Nível Categoria"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--Esta seção CDATA contém as informações de layout do pacote. A seção inclui informações como coordenadas (x,y), largura e altura.-->
@@ -3665,6 +3681,10 @@ SELECT'002' AS CODIGO, 'Fábrica São Paulo' AS DESCRITOR</property>
           Size="162,50"
           Id="Package\Criação da Dimensão Fábrica"
           TopLeft="17,11" />
+        <NodeLayout
+          Size="300,42"
+          Id="Package\Criação de Dimensão Produto - Nível Categoria"
+          TopLeft="498,49" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -3832,9 +3852,7 @@ SELECT'002' AS CODIGO, 'Fábrica São Paulo' AS DESCRITOR</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="71,40.6862745098039,16,16"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3868,9 +3886,7 @@ SELECT'002' AS CODIGO, 'Fábrica São Paulo' AS DESCRITOR</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="6.5,40.6862745098039,16,16"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
@@ -3896,9 +3912,7 @@ SELECT'002' AS CODIGO, 'Fábrica São Paulo' AS DESCRITOR</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-8,18.25,16,16"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
@@ -3924,9 +3938,7 @@ SELECT'002' AS CODIGO, 'Fábrica São Paulo' AS DESCRITOR</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-8,18.25,16,16"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
@@ -3952,9 +3964,7 @@ SELECT'002' AS CODIGO, 'Fábrica São Paulo' AS DESCRITOR</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-8,18.25,16,16"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
@@ -4129,9 +4139,7 @@ SELECT'002' AS CODIGO, 'Fábrica São Paulo' AS DESCRITOR</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4153,9 +4161,7 @@ SELECT'002' AS CODIGO, 'Fábrica São Paulo' AS DESCRITOR</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
