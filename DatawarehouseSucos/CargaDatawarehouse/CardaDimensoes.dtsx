@@ -11,8 +11,8 @@
   DTS:LocaleID="1046"
   DTS:ObjectName="CardaDimensoes"
   DTS:PackageType="5"
-  DTS:VersionBuild="49"
-  DTS:VersionGUID="{A2FC41F0-E4F1-4BED-9C9E-E40A3B1C6D94}">
+  DTS:VersionBuild="60"
+  DTS:VersionGUID="{65072485-B0D1-4557-BC25-AF38C2A8469C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -188,6 +188,53 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gerenciador de Conexões de Arquivos Simples 4]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{060A8FFC-7CE7-4662-91DB-CBBEDB7EB04F}"
+      DTS:ObjectName="Gerenciador de Conexões de Arquivos Simples 4">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1046"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\elthe\OneDrive\Área de Trabalho\Alura\Arquivos-Aula2\Arquivos - Aula 2\REGIOES DOS ESTADOS.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ESTADO ABREVIAÇÃO"
+              DTS:DTSID="{18209FDF-F7DA-4C2D-B64C-777E3F43E892}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ESTADO"
+              DTS:DTSID="{7DA2D89E-2B08-4C37-BF44-CA953C3ACD22}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="REGIAO"
+              DTS:DTSID="{306006AC-96F0-4685-A1ED-5A56C4496B5E}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Gerenciador de Conexões do Excel]"
       DTS:CreationName="EXCEL"
       DTS:DTSID="{EE696D31-CB1E-4F94-8112-2EF46302CFDD}"
@@ -214,7 +261,17 @@
       DTS:ObjectName="Gerenciador de Conexões do Excel 10">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\elthe\OneDrive\Área de Trabalho\Alura\Arquivos-Aula3\Arquivos - Aula 3\PRODUTOS.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\elthe\OneDrive\Área de Trabalho\Alura\Arquivos-Aula3\Arquivos - Aula 3\PRODUTOS.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gerenciador de Conexões do Excel 11]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{B81A8F4D-105C-4C21-A361-73C73EDF096E}"
+      DTS:ObjectName="Gerenciador de Conexões do Excel 11">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\elthe\OneDrive\Área de Trabalho\Alura\Arquivos-Aula2\Arquivos - Aula 2\CADASTRO DE CLIENTES.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -342,7 +399,6 @@
       DTS:refId="Package\Criação da Dimenssão tempo"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarefa Fluxo de Dados"
-      DTS:Disabled="True"
       DTS:DTSID="{18E02079-4C9A-49E9-90C2-C698BE08132D}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -2639,7 +2695,6 @@ SELECT * FROM @DIMDATE order by Cod_Dia</property>
       DTS:refId="Package\Criação da Dimensão Cliente"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarefa Fluxo de Dados"
-      DTS:Disabled="True"
       DTS:DTSID="{AABD0051-620B-4EEA-B2E2-01FE936CE5BC}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -2672,8 +2727,8 @@ SELECT * FROM @DIMDATE order by Cod_Dia</property>
               <connections>
                 <connection
                   refId="Package\Criação da Dimensão Cliente\Arquivo CSV Estado com Região.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Gerenciador de Conexões de Arquivos Simples]"
-                  connectionManagerRefId="Package.ConnectionManagers[Gerenciador de Conexões de Arquivos Simples]"
+                  connectionManagerID="Package.ConnectionManagers[Gerenciador de Conexões de Arquivos Simples 4]"
+                  connectionManagerRefId="Package.ConnectionManagers[Gerenciador de Conexões de Arquivos Simples 4]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
@@ -5140,7 +5195,7 @@ SELECT * FROM @DIMDATE order by Cod_Dia</property>
                 <property
                   dataType="System.String"
                   description="Especifica o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
-                  name="OpenRowset"></property>
+                  name="OpenRowset">CLIENTES$</property>
                 <property
                   dataType="System.String"
                   description="Especifica a variável que contém o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
@@ -5167,8 +5222,8 @@ SELECT * FROM @DIMDATE order by Cod_Dia</property>
               <connections>
                 <connection
                   refId="Package\Criação da Dimensão Cliente\Planilha de Clientes.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Gerenciador de Conexões do Excel]"
-                  connectionManagerRefId="Package.ConnectionManagers[Gerenciador de Conexões do Excel]"
+                  connectionManagerID="Package.ConnectionManagers[Gerenciador de Conexões do Excel 11]"
+                  connectionManagerRefId="Package.ConnectionManagers[Gerenciador de Conexões do Excel 11]"
                   description="A conexão de tempo de execução OLE DB usada para acessar o banco de dados."
                   name="OleDbConnection" />
               </connections>
@@ -5394,7 +5449,6 @@ SELECT * FROM @DIMDATE order by Cod_Dia</property>
       DTS:refId="Package\Criação da Dimensão Fábrica"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarefa Fluxo de Dados"
-      DTS:Disabled="True"
       DTS:DTSID="{2D54ED3C-847E-4FC3-BF7D-57ADF1486940}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -6198,7 +6252,6 @@ SELECT'002' AS CODIGO, 'Fábrica São Paulo' AS DESCRITOR</property>
       DTS:refId="Package\Criação da Dimensão Organizacional"
       DTS:CreationName="STOCK:SEQUENCE"
       DTS:Description="Contêiner da Sequência"
-      DTS:Disabled="True"
       DTS:DTSID="{DB8B7E13-9E2D-4A9B-B070-5B6FFAE47E0F}"
       DTS:ExecutableType="STOCK:SEQUENCE"
       DTS:LocaleID="-1"
@@ -12489,7 +12542,6 @@ SELECT'002' AS CODIGO, 'Fábrica São Paulo' AS DESCRITOR</property>
       DTS:refId="Package\Criação daDimensão Produto"
       DTS:CreationName="STOCK:SEQUENCE"
       DTS:Description="Contêiner da Sequência"
-      DTS:Disabled="True"
       DTS:DTSID="{542AD59E-D355-423A-BC47-C84C7F87900B}"
       DTS:ExecutableType="STOCK:SEQUENCE"
       DTS:LocaleID="-1"
@@ -16030,7 +16082,7 @@ SELECT'002' AS CODIGO, 'Fábrica São Paulo' AS DESCRITOR</property>
           PanelSize="657,569"
           Size="651,46"
           Id="Package\Criação da Dimensão Organizacional"
-          TopLeft="536,69" />
+          TopLeft="477,208" />
         <NodeLayout
           Size="507,42"
           Id="Package\Criação da Dimenssão tempo"
@@ -16066,7 +16118,9 @@ SELECT'002' AS CODIGO, 'Fábrica São Paulo' AS DESCRITOR</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16100,16 +16154,18 @@ SELECT'002' AS CODIGO, 'Fábrica São Paulo' AS DESCRITOR</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <ContainerLayout
           HeaderHeight="44"
-          IsExpanded="True"
+          IsExpanded="False"
           PanelSize="650,244"
-          Size="650,288"
+          Size="650,44"
           Id="Package\Criação daDimensão Produto"
-          TopLeft="536,13" />
+          TopLeft="537,14" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -16250,7 +16306,7 @@ SELECT'002' AS CODIGO, 'Fábrica São Paulo' AS DESCRITOR</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
+              BoundingBox="-8,18.25,16,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -16310,7 +16366,7 @@ SELECT'002' AS CODIGO, 'Fábrica São Paulo' AS DESCRITOR</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
+              BoundingBox="-8,18.25,16,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -16346,7 +16402,7 @@ SELECT'002' AS CODIGO, 'Fábrica São Paulo' AS DESCRITOR</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
+              BoundingBox="6.5,40.6862745098039,16,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -16382,7 +16438,7 @@ SELECT'002' AS CODIGO, 'Fábrica São Paulo' AS DESCRITOR</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
+              BoundingBox="71,40.6862745098039,16,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -16405,9 +16461,7 @@ SELECT'002' AS CODIGO, 'Fábrica São Paulo' AS DESCRITOR</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16429,9 +16483,7 @@ SELECT'002' AS CODIGO, 'Fábrica São Paulo' AS DESCRITOR</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16454,7 +16506,7 @@ SELECT'002' AS CODIGO, 'Fábrica São Paulo' AS DESCRITOR</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
+              BoundingBox="-8,18.25,16,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -16489,9 +16541,7 @@ SELECT'002' AS CODIGO, 'Fábrica São Paulo' AS DESCRITOR</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16513,9 +16563,7 @@ SELECT'002' AS CODIGO, 'Fábrica São Paulo' AS DESCRITOR</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -18478,7 +18526,9 @@ SELECT'002' AS CODIGO, 'Fábrica São Paulo' AS DESCRITOR</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -18880,7 +18930,9 @@ SELECT'002' AS CODIGO, 'Fábrica São Paulo' AS DESCRITOR</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -18902,7 +18954,9 @@ SELECT'002' AS CODIGO, 'Fábrica São Paulo' AS DESCRITOR</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -18924,7 +18978,9 @@ SELECT'002' AS CODIGO, 'Fábrica São Paulo' AS DESCRITOR</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -18958,7 +19014,9 @@ SELECT'002' AS CODIGO, 'Fábrica São Paulo' AS DESCRITOR</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -19109,7 +19167,9 @@ SELECT'002' AS CODIGO, 'Fábrica São Paulo' AS DESCRITOR</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -19131,7 +19191,9 @@ SELECT'002' AS CODIGO, 'Fábrica São Paulo' AS DESCRITOR</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -19153,7 +19215,9 @@ SELECT'002' AS CODIGO, 'Fábrica São Paulo' AS DESCRITOR</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -19329,7 +19393,9 @@ SELECT'002' AS CODIGO, 'Fábrica São Paulo' AS DESCRITOR</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -19351,7 +19417,9 @@ SELECT'002' AS CODIGO, 'Fábrica São Paulo' AS DESCRITOR</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -19373,7 +19441,9 @@ SELECT'002' AS CODIGO, 'Fábrica São Paulo' AS DESCRITOR</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -19395,7 +19465,9 @@ SELECT'002' AS CODIGO, 'Fábrica São Paulo' AS DESCRITOR</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -19525,7 +19597,9 @@ SELECT'002' AS CODIGO, 'Fábrica São Paulo' AS DESCRITOR</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
