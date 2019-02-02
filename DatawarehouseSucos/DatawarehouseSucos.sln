@@ -7,6 +7,8 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DatawarehouseSucos", "Dataw
 EndProject
 Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "CargaDatawarehouse", "CargaDatawarehouse\CargaDatawarehouse.dtproj", "{2FF57A0F-546B-403B-861C-BCAB74136167}"
 EndProject
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "OLAPSucos", "OLAPSucos\OLAPSucos.dwproj", "{27A32C08-F874-438B-BD53-458FFBFA2DE7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,15 @@ Global
 		{2FF57A0F-546B-403B-861C-BCAB74136167}.Development|Any CPU.Build.0 = Development
 		{2FF57A0F-546B-403B-861C-BCAB74136167}.Release|Any CPU.ActiveCfg = Development
 		{2FF57A0F-546B-403B-861C-BCAB74136167}.Release|Any CPU.Build.0 = Development
+		{27A32C08-F874-438B-BD53-458FFBFA2DE7}.Debug|Any CPU.ActiveCfg = Development
+		{27A32C08-F874-438B-BD53-458FFBFA2DE7}.Debug|Any CPU.Build.0 = Development
+		{27A32C08-F874-438B-BD53-458FFBFA2DE7}.Debug|Any CPU.Deploy.0 = Development
+		{27A32C08-F874-438B-BD53-458FFBFA2DE7}.Development|Any CPU.ActiveCfg = Development
+		{27A32C08-F874-438B-BD53-458FFBFA2DE7}.Development|Any CPU.Build.0 = Development
+		{27A32C08-F874-438B-BD53-458FFBFA2DE7}.Development|Any CPU.Deploy.0 = Development
+		{27A32C08-F874-438B-BD53-458FFBFA2DE7}.Release|Any CPU.ActiveCfg = Development
+		{27A32C08-F874-438B-BD53-458FFBFA2DE7}.Release|Any CPU.Build.0 = Development
+		{27A32C08-F874-438B-BD53-458FFBFA2DE7}.Release|Any CPU.Deploy.0 = Development
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
