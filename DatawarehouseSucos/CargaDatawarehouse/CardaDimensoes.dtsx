@@ -11,8 +11,8 @@
   DTS:LocaleID="1046"
   DTS:ObjectName="CardaDimensoes"
   DTS:PackageType="5"
-  DTS:VersionBuild="60"
-  DTS:VersionGUID="{65072485-B0D1-4557-BC25-AF38C2A8469C}">
+  DTS:VersionBuild="72"
+  DTS:VersionGUID="{981F6F66-A76F-440A-BB7D-E890F60677CE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -363,7 +363,7 @@
       DTS:ObjectName="Ano_Final">
       <DTS:Property
         DTS:DataType="8"
-        DTS:Name="ParameterValue">2014</DTS:Property>
+        DTS:Name="ParameterValue">2015</DTS:Property>
     </DTS:PackageParameter>
     <DTS:PackageParameter
       DTS:CreationName=""
@@ -372,7 +372,7 @@
       DTS:ObjectName="Ano_Inicial">
       <DTS:Property
         DTS:DataType="8"
-        DTS:Name="ParameterValue">2014</DTS:Property>
+        DTS:Name="ParameterValue">2013</DTS:Property>
     </DTS:PackageParameter>
     <DTS:PackageParameter
       DTS:CreationName=""
@@ -16461,7 +16461,9 @@ SELECT'002' AS CODIGO, 'Fábrica São Paulo' AS DESCRITOR</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16483,7 +16485,9 @@ SELECT'002' AS CODIGO, 'Fábrica São Paulo' AS DESCRITOR</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16541,7 +16545,9 @@ SELECT'002' AS CODIGO, 'Fábrica São Paulo' AS DESCRITOR</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16563,7 +16569,9 @@ SELECT'002' AS CODIGO, 'Fábrica São Paulo' AS DESCRITOR</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -18526,9 +18534,7 @@ SELECT'002' AS CODIGO, 'Fábrica São Paulo' AS DESCRITOR</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout

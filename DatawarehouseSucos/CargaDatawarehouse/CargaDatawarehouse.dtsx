@@ -11,8 +11,8 @@
   DTS:LocaleID="1046"
   DTS:ObjectName="CargaDatawarehouse"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{7429CFD5-36CB-4A54-AEB0-AB7DA27D67CC}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{6C91CAA2-452C-4030-83A8-94384D2903DE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
